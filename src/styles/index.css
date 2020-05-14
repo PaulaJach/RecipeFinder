@@ -1,4 +1,8 @@
 body {
-    text-align: center;
+    
     padding: 5%;
+}
+
+.btn-submit {
+    margin: 0 auto;
 }

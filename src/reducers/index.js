@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
 import { SET_RECIPES } from '../actions';
 
-function recipes(state =[], action) {
+function recipes(state , action) {
+    if (typeof state === 'undefined') {
+        return [];
+    }
+    
     switch(action.type) {
         case SET_RECIPES:
-            return action.items;
+            return action.items.length !== 0 ? action.items : [];
         default:
             return state;
     }

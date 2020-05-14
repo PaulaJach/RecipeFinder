@@ -5,4 +5,4 @@ export function setRecipes(items) {
         type: SET_RECIPES,
         items
     }
-}
+};
