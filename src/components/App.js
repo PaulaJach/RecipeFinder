@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import SearchRecipes from './SearchRecipes';
-import FavouritesList from './FavouritesList';
 import RecipeList from './RecipeList';
+import FavouritesList from './FavouritesList';
 
 import '../styles/index.css';
 
@@ -13,7 +13,6 @@ class App extends Component {
                 <h2>Recipe Finder</h2>
                 <SearchRecipes />
                 <RecipeList />
-                <FavouritesList />
             </Container>
         )
     }
