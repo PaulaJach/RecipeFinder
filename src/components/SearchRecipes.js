@@ -11,12 +11,12 @@ class SearchRecipes extends Component {
         this.state = {
             ingredients: '',
             dish: ''
-        }
-    }
+        };
+    };
+
     search() {
         let { ingredients, dish } = this.state;
         const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
-        // console.log('state', this.state, 'url', url);
 
         fetch(url, {
             method: 'GET'
@@ -30,7 +30,7 @@ class SearchRecipes extends Component {
     onSubmitHandler = (e) => {
         e.preventDefault();
         this.search();
-    }
+    };
 
     render() {
         return(           

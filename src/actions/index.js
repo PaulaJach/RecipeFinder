@@ -6,12 +6,12 @@ export function setRecipes(items) {
     return {
         type: SET_RECIPES,
         items
-    }
+    };
 };
 
 export function favouriteRecipe(recipe) {
     return {
         type: FAVOURITE_RECIPE,
         recipe
-    }
+    };
 };

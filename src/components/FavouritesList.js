@@ -8,7 +8,7 @@ class FavouritesList extends Component {
         return (
             <div>
                 <h4 className="link"><Link to='/'>Home</Link></h4>
-                <h4>Favourite Recipes:</h4>
+                <h4 className="mt-4 text-center">Favourite Recipes:</h4>
                 {
                     this.props.favouriteRecipes.map((recipe, index) => {
                         return (
@@ -16,18 +16,18 @@ class FavouritesList extends Component {
                                 key={index} 
                                 recipe={recipe}
                                 favouriteButton={false} />
-                        )
+                        );
                     })  
                 } 
             </div>          
-        )
-    }
+        );
+    };
 };
 
 function mapStateToProps(state) {
     return {
         favouriteRecipes: state.favouriteRecipes
-    }
+    };
 };
 
 export default connect(mapStateToProps, null)(FavouritesList);
