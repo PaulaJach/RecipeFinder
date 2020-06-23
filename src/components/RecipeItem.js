@@ -19,17 +19,17 @@ class RecipeItem extends Component {
     render() {
         let { recipe } = this.props;
         return (
-            <div className="recipe-item">
+            <div className="recipe__item">
                 {
                     this.props.favouriteButton ?
                     
                         this.state.favourited ?
-                        <div className="recipe-star-fav" >
+                        <div className="recipe__star--fav" >
                              &#9733;
                         </div>
                         :
                         <div 
-                            className="recipe-star" 
+                            className="recipe__star" 
                             onClick = {() => this.onClickHandler(recipe)}>
                              &#9734;
                         </div>
@@ -39,9 +39,9 @@ class RecipeItem extends Component {
                 }
                 
                 
-                <div className="recipe-text">
+                <div className="recipe__text">
                     <a href={recipe.href}>
-                        <h4 className="text-center">{recipe.title}</h4>
+                        <h4 className="recipe__subtitle text-center">{recipe.title}</h4>
                     </a>
                     <p>{recipe.ingredients}</p>
                     
@@ -49,7 +49,7 @@ class RecipeItem extends Component {
                 <img 
                     src={recipe.thumbnail !==undefined ? recipe.thumbnail : null} 
                     alt="recipe" 
-                    className="recipe-img" />
+                    className="recipe__img" />
             </div>
         );
     };

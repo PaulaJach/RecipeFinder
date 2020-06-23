@@ -37,26 +37,11 @@ class SearchRecipes extends Component {
             <Form onSubmit = {this.onSubmitHandler}>
                 <Form.Group as={Row}>
                     <Form.Label column sm={2}>
-                        Ingredients
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control 
-                            type="text" 
-                            placeholder="garlic, chicken" 
-                            onChange={event => this.setState(
-                                {ingredients: event.target.value})
-                            } 
-                        />
-                    </Col>
-                </Form.Group>
-
-                <Form.Group as={Row}>
-                    <Form.Label column sm={2}>
-                        Dish
+                        Type dish or ingredient name:
                     </Form.Label>
                     <Col sm={10}>
                         <Form.Control type="text" 
-                            placeholder="adobo" 
+                            placeholder="pizza" 
                             onChange = {event => this.setState(
                                 {dish: event.target.value})
                             }
